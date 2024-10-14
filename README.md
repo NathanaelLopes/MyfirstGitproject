@@ -1,3 +1,4 @@
 # MyfirstGitproject
 
-olá mundogit
+olá mundo
+Trabalho feito em casa
