@@ -108,8 +108,26 @@ int main(){
     // comparar valores
     // else if vai ser chamada se a anterior for chamada
     // switch é para selecionar um dos blocos de comamndo
+    // do while e uma variaçao do while
+    // loop for precisa de 3 parametros para ser executada
+    // break para qualquer ciclo seja while ou do while
+    //continue semp+re volta para cima no for ou no while
+    //array especie de "armario" para guardar informaçoes int,variaveis []numero de "gavetas"
+    //struct cria uma variavel
 
-    
+
+    system("clear");
+
+       for (int x=0; x<10; x++){
+        cout << "o x tem o valor de : " << x << endl;
+        continue;
+       }
+       cout << "Hello, World" << endl;
+
+
+
+
+
 
 
     return 0;
