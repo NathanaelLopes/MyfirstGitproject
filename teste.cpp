@@ -2,7 +2,7 @@
 
 using namespace std;// usar sempre
 
-int main(){
+ int main(){
 
  // Funçao principal
     cout << "Hello World" << endl;
@@ -116,25 +116,28 @@ int main(){
     //struct cria uma variavel
 
 
-    system("clear");
+    //system("clear");
 
-       for (int x=0; x<10; x++){
-        cout << "o x tem o valor de : " << x << endl;
-        continue;
-       }
-       cout << "Hello, World" << endl;
+     //  for (int x=0; x<10; x++){
+     //   cout << "o x tem o valor de : " << x << endl;
+     //   continue;
+    //   }
+    //   cout << "Hello, World" << endl;
 
+ int x = 10;
+ const int Y = 20;
+ int myArr[20];
+ // int main(){ 
+     
+     string xpto = "Nahanael";
+     string ola = "olá";
 
+ myArr[10] = 9;
 
+ for(int x = 0; x <= 19; x++){
+    myArr[x]= x*2;
 
-
-
-
-
-
-
-
-
+ }
 
 
     return 0;
