@@ -138,6 +138,13 @@ using namespace std;// usar sempre
     myArr[x]= x*2;
 
  }
+ 
+
+ // int
+ //float
+ //bool
+ //double
+ //char
 
 
     return 0;
