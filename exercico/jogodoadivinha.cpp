@@ -6,27 +6,25 @@ using namespace std;
 
 int main() {
 
-    // Inicializa o gerador de números aleatórios
-    srand(time(0));
-    
-    // Array completo do alfabeto em minúsculas
-    char alfabeto[] = {
-        'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 
-        'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 
-        'u', 'v', 'w', 'x', 'y', 'z'
-    };
+    // Array do alfabeto em minúsculas
+    char alfabeto[26] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+                     'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
 
-    // Escolhe uma letra aleatória
+    // O computador escolhe uma letra aleatória
     char letraEscolhida = alfabeto[rand() % 26];
     
-    // Variáveis do jogo
+    // Variáveis do jogodoadivinha
     char chute;
     int tentativas = 6;
     bool acertou = false;
-
+    
+    // Inicializa o gerador de números aleatórios
+    srand(time(0));
+    
+    //Instruções do jogo
     cout << "Bem-vindo ao jogo de adivinhar a letra!" << endl;
     cout << "Tente adivinhar a letra escolhida pelo computador." << endl;
-    cout << "Tens " << tentativas << " tentativas." << endl;
+    cout << "você tem " << tentativas << " tentativas." << endl;
 
     // Loop do jogo
     while (tentativas > 0) {
