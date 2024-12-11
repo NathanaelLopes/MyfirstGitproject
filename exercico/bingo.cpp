@@ -4,14 +4,15 @@
 using namespace std;
  
 
-int tamanhodocartao = 5; 
+ int tamanhodocartao = 5; 
  int cartoes;
  bool umcartoes = true;
+
  
  int main() {
 
-cout << "Bem vindo ao jogo do bingo!!" <<endl;
-cout << "Pode escolher entre 1 ou 2 cartões"<<endl;
+ cout << "Bem vindo ao jogo do bingo!!" <<endl;
+ cout << "Pode escolher entre 1 ou 2 cartões"<<endl;
  cout<< "Quantos cartoes deseja?:";
     cin >> cartoes;
     
