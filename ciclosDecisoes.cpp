@@ -1,16 +1,18 @@
 #include <iostream>
 using namespace std;
 
-char vogais[5] = {'a','e','i','o','u'};
+char vogais[] = {'a','e','i','o','u'};
 
 int main(){
 
-    for(char nome : vogais){
-   string ID;
-   cout << "indique o ID para a vogal" << nome << endl;
-   cin >> ID;
-   cout << "ID da vogal" << nome << "é:" << ID << endl;
-    }
+    for(char v : vogais){
+        string ID;
+        cout << "indique o ID para a vogal: " << v << endl;
+        cin >> ID;
+        cout << "ID da vogal" << v << "é: " << ID << endl;
+   }
+
+
     
     return 0;
 }
