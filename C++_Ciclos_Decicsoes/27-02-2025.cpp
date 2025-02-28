@@ -44,7 +44,7 @@ int main(){
   * Elaboa uma funçao que calcule a formula apresentada pelo professor
   */
 
- void resolvente(float a, float b, float c){
+ /*void resolvente(float a, float b, float c){
    float x1, x2;
    float delta = (b*b)-(4*a*c);
    if(delta < 0){
@@ -54,8 +54,9 @@ int main(){
       x2 = (-b-sqrt(delta))/(2*a);
       cout << "x1: " << x1 << endl;
       cout << "x2: " << x2 << endl;
-   }
+   }*/
+
     return 0;
 }
-}
+
 
