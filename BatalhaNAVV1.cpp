@@ -1,3 +1,7 @@
+
+//Feito por Nathanael Oliveira e Mateus Camara
+
+
 #include <iostream> 
 #include <ctime>     
 using namespace std;
