@@ -110,6 +110,8 @@ int main() {
         // Sorteia um número entre 1 e 6 para o dado
         int dado = rand() % 6 + 1;
         cout << "🎲 Dado: " << dado << endl;
+        cout << "Pressione ENTER para continuar...";
+        cin.get();  // espera o jogador
 
         // JOGADOR 1 
         if (jogador == 1) {
