@@ -25,6 +25,22 @@ private:
         return vector<int>(numbers.begin(), numbers.begin() + count);
     }
     
+    void printHorizontalLine(ostream& out) {
+        out << "+----+----+----+----+----+" << endl;
+    }
+    
+    void printRow(ostream& out, int row) {
+        out << "|";
+        for (int col = 0; col < 5; col++) {
+            if (row == 2 && col == 2) {
+                out << "FREE|";
+            } else {
+                out << setw(4) << card[row][col] << "|";
+            }
+        }
+        out << endl;
+    }
+    
 public:
     BingoCard() {
         vector<int> colB = generateUniqueNumbers(1, 20, 5);
@@ -46,25 +62,19 @@ public:
     
     void display(int cardNumber) {
         cout << "\nCarta " << cardNumber << ":" << endl;
-        cout << " B      I      N      G      O" << endl;
+        printHorizontalLine(cout);
+        cout << "| B  | I  | N  | G  | O  |" << endl;
+        printHorizontalLine(cout);
         
         for (int row = 0; row < 5; row++) {
-            for (int col = 0; col < 5; col++) {
-                if (row == 2 && col == 2) {
-                    cout << setw(3) << "**" << "    ";
-                } else {
-                    cout << setw(3) << card[row][col] << "    ";
-                }
-            }
-            cout << endl;
+            printRow(cout, row);
+            printHorizontalLine(cout);
         }
     }
     
-    // Salvar cartela em arquivo individual
     void saveToFile(int cardNumber) {
-        // Criar nome do arquivo: carta_1.txt, carta_2.txt, etc.
         ostringstream filename;
-        filename << "carta_" << cardNumber << ".txt";
+        
         
         ofstream file(filename.str());
         
@@ -73,29 +83,20 @@ public:
             return;
         }
         
-        // Escrever cabeçalho
         file << "==================================================" << endl;
         file << "              CARTÃO DE BINGO #" << cardNumber << endl;
         file << "==================================================" << endl;
         file << endl;
         
-        // Escrever as colunas
-        file << " B      I      N      G      O" << endl;
-        file << "---   ---   ---   ---   ---" << endl;
+        printHorizontalLine(file);
+        file << "| B  | I  | N  | G  | O  |" << endl;
+        printHorizontalLine(file);
         
-        // Escrever os números
         for (int row = 0; row < 5; row++) {
-            for (int col = 0; col < 5; col++) {
-                if (row == 2 && col == 2) {
-                    file << setw(3) << "**" << "    ";
-                } else {
-                    file << setw(3) << card[row][col] << "    ";
-                }
-            }
-            file << endl;
+            printRow(file, row);
+            printHorizontalLine(file);
         }
         
-        // Rodapé
         file << endl;
         file << "==================================================" << endl;
         file << "    Boa sorte! Marque os números sorteados!" << endl;
@@ -103,7 +104,7 @@ public:
         
         file.close();
         
-        cout << "  -> Arquivo criado: " << filename.str() << endl;
+       
     }
 };
 
@@ -127,7 +128,6 @@ int main(int argc, char* argv[]) {
     cout << "Gerando " << numCards << " carta(s)..." << endl;
     cout << endl;
     
-    // Gerar e salvar os cartões
     for (int i = 0; i < numCards; i++) {
         BingoCard card;
         card.display(i + 1);
